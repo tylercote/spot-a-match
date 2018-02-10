@@ -7,9 +7,15 @@ import {SpotifyService} from '../_services/spotify.service';
   styleUrls: ['./profile-entry.component.css']
 })
 export class ProfileEntryComponent implements OnInit {
+  user1 = '';
+  user2 = '';
 
   constructor(private spotifyService: SpotifyService) { }
 
   ngOnInit() {
+  }
+
+  getUserData() {
+
   }
 }
