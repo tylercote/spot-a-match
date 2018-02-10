@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import SpotifyService from 'angular2-spotify';
+import {SpotifyService} from 'angular2-spotify';
 
 @Component({
   selector: 'app-root',
@@ -26,6 +26,6 @@ export class AppComponent {
   constructor(private spotifyService: SpotifyService) {}
 
   getPlaylistData() {
-    this.spotifyService.;
+    this.spotifyService.login();
   }
 }
