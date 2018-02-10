@@ -7,8 +7,8 @@ import { Profile } from './profile-entry/profile-entry.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
-import {SpotifyService} from './_services/spotify.service';
 import {HttpClientModule} from '@angular/common/http';
+import {SpotifyService} from 'angular2-spotify';
 
 
 @NgModule({

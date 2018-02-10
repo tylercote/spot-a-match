@@ -11,5 +11,4 @@ export class Profile implements OnInit {
 
   ngOnInit() {
   }
-
 }
