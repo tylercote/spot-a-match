@@ -11,5 +11,4 @@ export class ProfileEntryComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }
