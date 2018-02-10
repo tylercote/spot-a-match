@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {SpotifyService} from './_services/spotify.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  constructor(private spotifyService: SpotifyService) {}
+
+  getPlaylistData() {
+    this.spotifyService.getPlaylists('1239349331');
+  }
 }
