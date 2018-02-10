@@ -1,10 +1,10 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { AppComponent } from './app.component';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {AppComponent} from './app.component';
 import {ProfileEntryComponent} from './profile-entry/profile-entry.component';
 import {HttpClientModule} from '@angular/common/http';
 import {ComparisonComponent} from './comparison/comparison.component';
-import {SpotifyService} from 'angular2-spotify';
+import {SpotifyService} from './_services/spotify.service';
 
 
 @NgModule({
@@ -15,7 +15,7 @@ import {SpotifyService} from 'angular2-spotify';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [SpotifyService],
   bootstrap: [AppComponent]
