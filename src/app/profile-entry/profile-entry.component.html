@@ -1,3 +1,5 @@
+
+
 <a href='https://accounts.spotify.com/authorize?client_id=0067197c8931420ebf31c08c52d42a77
 &response_type=token
 &redirect_uri=http://localhost:4200/'>
@@ -10,22 +12,20 @@
 <div class="form-group row">
   <div class="col-xs-2 col-centered">
     <label for="username1" color="white"><font size="5" font="Helvetica" color="white">User ID:</font></label>
-    <input class="form-control" id="username1" type="text">
+    <input [(ngModel)]="user1" class="form-control" id="username1" type="text">
   </div>
   <div class="col-xs-3 col-centered">
     <label for="username2"color="white"><font size="5" font="Helvetica"color="white">User ID:</font></label>
-    <input class="form-control" id="username2" type="text">
+    <input [(ngModel)]="user2" class="form-control" id="username2" type="text">
   </div>
 </div>
-
-
 
 
 <div class="row">
   <div class="col-sm-12">
     <div class="text-center">
-      <button class="btn btn-primary btn-success" id="singlebutton"
-              href="comparison.component.html">
+      <button (click)="getUserData()" class="btn btn-primary btn-success" id="singlebutton"
+              href="comparison.component">
         Spot my match!</button>
     </div>
   </div>

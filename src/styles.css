@@ -1,7 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
 body {
-  background-color: #000000
+  background-image: url("https://wallpaperscraft.com/image/galaxy_stars_nebulae_clusters_68741_3840x2400.jpg");
+  background-attachment: fixed;
+  background-size: 1500px 1000px;
+  background-color: #252525
 }
 
 

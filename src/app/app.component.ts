@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {SpotifyService} from './_services/spotify.service';
-import * as spotify from 'spotify-web-api-js';
-const s = new spotify();
+import * as Spotify from 'spotify-web-api-js';
+const s = new Spotify();
 
 @Component({
   selector: 'app-root',
@@ -12,10 +11,8 @@ const s = new spotify();
 export class AppComponent implements OnInit {
   title = 'app';
 
-
-  constructor(private spotifyService: SpotifyService) {}
+  constructor() {}
 
   ngOnInit() {
-    this.spotifyService.getAuth();
   }
  }

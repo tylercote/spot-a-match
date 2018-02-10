@@ -5,6 +5,7 @@ import {ProfileEntryComponent} from './profile-entry/profile-entry.component';
 import {HttpClientModule} from '@angular/common/http';
 import {ComparisonComponent} from './comparison/comparison.component';
 import {SpotifyService} from './_services/spotify.service';
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import {SpotifyService} from './_services/spotify.service';
     ComparisonComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     HttpClientModule,
   ],
