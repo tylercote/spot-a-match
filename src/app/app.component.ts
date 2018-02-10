@@ -28,4 +28,4 @@ export class AppComponent {
   getPlaylistData() {
     this.spotifyService.login();
   }
-}
+ }
