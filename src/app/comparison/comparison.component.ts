@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComparisonComponent implements OnInit {
 
+  user1Danciness;
+  user2Danciness;
   constructor() { }
 
   ngOnInit() {
