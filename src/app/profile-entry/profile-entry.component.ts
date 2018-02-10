@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {SpotifyService} from '../_services/spotify.service';
 
 @Component({
   selector: 'app-profile',
@@ -10,7 +9,7 @@ export class ProfileEntryComponent implements OnInit {
   user1 = '';
   user2 = '';
 
-  constructor(private spotifyService: SpotifyService) { }
+  constructor() { }
 
   ngOnInit() {
   }
