@@ -26,3 +26,15 @@
   margin-bottom: 10px;
   font-weight: 100;
 }
+
+.image {
+  position: relative;
+  text-align: center;
+}
+
+h2 {
+  position: absolute;
+  top: 250px;
+  left: 0;
+  width: 100%;
+}
