@@ -6,9 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile-entry.component.css']
 })
 export class ProfileEntryComponent implements OnInit {
+  user1 = '';
+  user2 = '';
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  getUserData() {
+
   }
 }
