@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProfileEntryComponent } from './profile-entry.component';
+import { ComparisonComponent } from './comparison.component';
 
-describe('Profile', () => {
-  let component: ProfileEntryComponent;
-  let fixture: ComponentFixture<ProfileEntryComponent>;
+describe('ComparisonComponent', () => {
+  let component: ComparisonComponent;
+  let fixture: ComponentFixture<ComparisonComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProfileEntryComponent ]
+      declarations: [ ComparisonComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ProfileEntryComponent);
+    fixture = TestBed.createComponent(ComparisonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
