@@ -2,11 +2,19 @@
   background-color:#00cc33;
 }
 
+.right {
+  float: right;
+  width: 300px;
+  border: 3px solid #73AD21;
+  padding: 10px;
+}
+
 .progress-bar {
   float: left;
   width: 0;
   height: 100%;
   font-size:12px;
+  line-height: 30px;
   color: #ffffff;
   text-align: center;
 }
@@ -21,4 +29,5 @@
 .bar-descr {
   margin-bottom: 10px;
   font-weight: 100;
+  text-align: center;
 }
