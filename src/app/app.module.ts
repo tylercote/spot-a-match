@@ -4,9 +4,7 @@ import {AppComponent} from './app.component';
 import {ProfileEntryComponent} from './profile-entry/profile-entry.component';
 import {HttpClientModule} from '@angular/common/http';
 import {ComparisonComponent} from './comparison/comparison.component';
-import {SpotifyService} from './_services/spotify.service';
-import {FormsModule} from "@angular/forms";
-
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +17,7 @@ import {FormsModule} from "@angular/forms";
     BrowserModule,
     HttpClientModule,
   ],
-  providers: [SpotifyService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

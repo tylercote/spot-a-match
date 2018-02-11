@@ -6,6 +6,7 @@
   <button value>Go to authorize</button>
 </a>
 
+<button (click)="getAuth()"></button>
 <div style="text-align:center"><p> <font color="white">true luv is one click away </font> </p> </div>
 
 
@@ -16,7 +17,7 @@
   </div>
   <div class="col-xs-3 col-centered">
     <label for="username2"color="white"><font size="5" font="Helvetica"color="white">User ID:</font></label>
-    <input [(ngModel)]="user2" class="form-control" id="username2" type="text">
+    <input [(ngModel)]="user2" class="form-control" id="username2" type="text" value="1239349331">
   </div>
 </div>
 
@@ -24,7 +25,7 @@
 <div class="row">
   <div class="col-sm-12">
     <div class="text-center">
-      <button (click)="getUserData()" class="btn btn-primary btn-success" id="singlebutton"
+      <button (click)="analyze()" class="btn btn-primary btn-success" id="singlebutton"
               href="comparison.component">
         Spot my match!</button>
     </div>
