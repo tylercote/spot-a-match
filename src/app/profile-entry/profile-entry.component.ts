@@ -1,5 +1,4 @@
-import {Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {Component, EventEmitter, Output} from '@angular/core';
 import * as $ from 'jquery';
 
 @Component({
@@ -7,15 +6,13 @@ import * as $ from 'jquery';
   templateUrl: './profile-entry.component.html',
   styleUrls: ['./profile-entry.component.css']
 })
-export class ProfileEntryComponent implements OnInit {
+export class ProfileEntryComponent {
   @Output()
   getUserData: EventEmitter<any> = new EventEmitter<any>();
   user1 = '';
   user2 = '';
 
-  constructor(private http: HttpClient) { }
-
-  ngOnInit() {}
+  constructor() { }
 
   getAuth() {
     return $.ajax(
