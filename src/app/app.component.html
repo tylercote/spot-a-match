@@ -1,5 +1,5 @@
 <app-profile (getUserData)="getDataFromChild($event)"></app-profile>
-<app-comparison></app-comparison>
+<app-comparison [data]="data" *ngIf="data"></app-comparison>
 
 <footer>
   <p><font size="3" font="Helvetica" color="white">Created for Hack Beanpot 2018</font></p>

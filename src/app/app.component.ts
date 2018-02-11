@@ -1,4 +1,4 @@
-import {Component, OnInit, Input} from '@angular/core';
+import {Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
 import * as Spotify from 'spotify-web-api-js';
 import PlaylistTrackObject = SpotifyApi.PlaylistTrackObject;
 import * as $ from 'jquery';
@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   title = 'app';
   user1;
   user2;
-  @Input()
+
   data;
 
   static possibleGenres = {
@@ -75,6 +75,7 @@ export class AppComponent implements OnInit {
       'pop': valuesFor('pop'),
       'musicpopularity': [user1['popularity'], user2['popularity'], 2],
       'instrumentalness': [15, 39, 2],
+      'danciness': [40, 69, 2],
       'highenergy': [20, 40, 2],
       'happiness': [5, 90, 2],
       'fast': [75, 34, 2]
@@ -86,6 +87,8 @@ export class AppComponent implements OnInit {
   }
 
   async buildUser(userId) {
+
+    // await s.getUser(userId).then(user => user.)
 
     const response = await this.getUserTracks(userId);
     const tracks = response['tracks'];
@@ -105,7 +108,6 @@ export class AppComponent implements OnInit {
       'artists': artists,
       'genres': genres,
       'popularity': Math.round(popularity[0] / tracks.length),
-
     };
     console.log(user);
     return user;
