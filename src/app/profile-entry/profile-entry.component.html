@@ -1,33 +1,38 @@
-
-
-<a href='https://accounts.spotify.com/authorize?client_id=0067197c8931420ebf31c08c52d42a77
-&response_type=token
-&redirect_uri=http://localhost:4200/'>
-  <button value>Go to authorize</button>
-</a>
-
-<button (click)="getAuth()"></button>
-<div style="text-align:center"><p> <font color="white">true luv is one click away </font> </p> </div>
+<div style="text-align:center"><p><font color="white">true luv is one click away </font></p></div>
 
 
 <div class="form-group row">
   <div class="col-xs-2 col-centered">
-    <label for="username1" color="white"><font size="5" font="Helvetica" color="white">User ID:</font></label>
+    <label for="username1" color="white"><font size="5" font="Helvetica" color="white">User
+      ID:</font></label>
     <input [(ngModel)]="user1" class="form-control" id="username1" type="text">
   </div>
   <div class="col-xs-3 col-centered">
-    <label for="username2"color="white"><font size="5" font="Helvetica"color="white">User ID:</font></label>
+    <label for="username2" color="white"><font size="5" font="Helvetica" color="white">User
+      ID:</font></label>
     <input [(ngModel)]="user2" class="form-control" id="username2" type="text" value="1239349331">
   </div>
 </div>
 
+<div class="row">
+  <div class="col-sm-12">
+    <div class="text-center">
+      <a href='https://accounts.spotify.com/authorize?client_id=0067197c8931420ebf31c08c52d42a77
+&response_type=token
+&redirect_uri=http://localhost:4200/'>
+        <button value>Login to Spotify</button>
+      </a>
+    </div>
+  </div>
+</div>
 
 <div class="row">
   <div class="col-sm-12">
     <div class="text-center">
       <button (click)="analyze()" class="btn btn-primary btn-success" id="singlebutton"
               href="comparison.component">
-        Spot my match!</button>
+        Spot my match!
+      </button>
     </div>
   </div>
 </div>

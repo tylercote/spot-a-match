@@ -6,7 +6,6 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./comparison.component.css']
 })
 export class ComparisonComponent implements OnInit {
-
   @Input()
   data;
 
@@ -19,8 +18,10 @@ export class ComparisonComponent implements OnInit {
     let total = 0;
     for (const key in this.data) {
       if (this.data.hasOwnProperty(key)) {
-        sum = sum + (Math.abs(this.data[key][0] - this.data[key][1]) * this.data[key][2]);
-        total = total + (this.data[key][2]);
+        if (this.data[key][2] !== 0) {
+          sum = sum + (Math.abs(this.data[key][0] - this.data[key][1]) * this.data[key][2]);
+          total = total + (this.data[key][2]);
+        }
       }
     }
     return Math.ceil(100 - (sum / total)) + '%';
