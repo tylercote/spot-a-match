@@ -47,16 +47,24 @@ export class AppComponent implements OnInit {
     console.log(this.data);
   }
 
+  static hashmapTotal(map) {
+    let total = 0;
+    for (let genre in map) {
+      total += map[genre];
+    }
+    return total;
+  }
+
   makeData(user1, user2) {
     let u1g = user1['genres'];
     let u2g = user2['genres'];
 
     function valuesFor(field) {
       const u1 = u1g[field];
-      const u1len = user1['tracks'].length;
+      const u1len = AppComponent.hashmapTotal(user1.genres);
 
       const u2 = u2g[field];
-      const u2len = user2['tracks'].length;
+      const u2len = AppComponent.hashmapTotal(user2.genres);
       return [
         Math.round(u1 / u1len * 100),
         Math.round(u2 / u2len * 100),
