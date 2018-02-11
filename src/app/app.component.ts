@@ -44,26 +44,41 @@ export class AppComponent implements OnInit {
     let user2ID = $event[1];
     this.user2 = await this.buildUser(user2ID);
     this.data = this.makeData(this.user1, this.user2);
-    console.log(this.data)
+    console.log(this.data);
   }
 
   makeData(user1, user2) {
     let u1g = user1['genres'];
     let u2g = user2['genres'];
 
-    return {
-      "jazz":       [u1g['jazz blues'],       u2g['jazz blues'], 1],
-      "classical":  [u1g['classical'],  u2g['classical'], 1],
-      'hiphop':     [u1g['hip hop'],    u2g['hip hop'], 1],
-      'bluesjazz':  [u1g['jazz blues'], u2g['jazz blues'], 1],
-      'country':    [u1g['country'],    u2g['country'], 1],
-      'edm':        [u1g['edm'],        u2g['edm'], 1],
-      'rock':       [u1g['rock'],       u2g['rock'], 1],
-      'indie':      [u1g['indie pop'],  u2g['indie pop'], 1],
-      'pop':        [u1g['pop'],        u2g['pop'], 1],
-      'musicpopularity': [user1['popularity'], user2['popularity'], 2],
-      'instrumentalness': [15, 39, 2]
+    function valuesFor(field) {
+      const u1 = u1g[field];
+      const u1len = user1['tracks'].length;
+
+      const u2 = u2g[field];
+      const u2len = user1['tracks'].length;
+      return [
+        Math.round(u1 / u1len * 100),
+        Math.round(u2 / u2len * 100),
+        1
+      ];
     }
+
+    return {
+      'classical': valuesFor('classical'),
+      'hiphop': valuesFor('hip hop'),
+      'bluesjazz': valuesFor('jazz blues'),
+      'country': valuesFor('country'),
+      'edm': valuesFor('edm'),
+      'rock': valuesFor('rock'),
+      'indie': valuesFor('indie pop'),
+      'pop': valuesFor('pop'),
+      'musicpopularity': [user1['popularity'], user2['popularity'], 2],
+      'instrumentalness': [15, 39, 2],
+      'highenergy': [20, 40, 2],
+      'happiness': [5, 90, 2],
+      'fast': [75, 34, 2]
+    };
   }
 
   async sleep(ms) {

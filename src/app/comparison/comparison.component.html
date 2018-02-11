@@ -15,13 +15,13 @@
 
 <div class="form-group row">
   <div class="col-md-6" align="center">
-    <p><font size="7" font="Helvetica" color="white"><b>DAN GAO</b></font></p>
-
+    <p><font size="7" font="Helvetica" color="white"><b>childish gambino</b></font></p>
   </div>
   <div class="col-md-6" align="center">
-    <p><font size="7" font="Helvetica" color="white"><b>TYLER COTE</b></font></p>
+    <p><font size="7" font="Helvetica" color="white"><b>Vladimir Putin</b></font></p>
   </div>
 </div>
+
 
 <div class="row">
   <div class="col-sm-12">
@@ -37,7 +37,9 @@
         <p class="bar-descr" class="col-centered"><font size="5" font="Helvetica"
                                                         color="white"></font></p>
         <div class="progress">
-          <div id="bar" class="progress-bar" style="width:76%">76%</div>
+          <div id="bar" class="progress-bar" [ngStyle]="{'width': data.classical[0] + '%'}">{{
+            data.classical[0] }}%
+          </div>
         </div>
       </div>
 
@@ -51,7 +53,9 @@
         <p class="bar-descr" class="col-centered"><font size="5" font="Helvetica"
                                                         color="white"></font></p>
         <div class="progress">
-          <div id="bar" class="progress-bar" style="width:76%">76%</div>
+          <div id="bar" class="progress-bar" [ngStyle]="{'width': data.classical[1] + '%'}">{{
+            data.classical[1] }}%
+          </div>
         </div>
       </div>
     </div>
@@ -61,7 +65,9 @@
         <p class="bar-descr" class="col-centered"><font size="5" font="Helvetica"
                                                         color="white"></font></p>
         <div class="progress">
-          <div id="bar" class="progress-bar" style="width:76%">76%</div>
+          <div id="bar" class="progress-bar" [ngStyle]="{'width': data.hiphop[0] + '%'}">{{
+            data.hiphop[0] }}%
+          </div>
         </div>
       </div>
 
@@ -75,7 +81,9 @@
         <p class="bar-descr" class="col-centered"><font size="5" font="Helvetica"
                                                         color="white"></font></p>
         <div class="progress">
-          <div id="bar" class="progress-bar" style="width:76%">76%</div>
+          <div id="bar" class="progress-bar" [ngStyle]="{'width': data.hiphop[1] + '%'}">{{
+            data.hiphop[1] }}%
+          </div>
         </div>
       </div>
     </div>
@@ -85,7 +93,9 @@
         <p class="bar-descr" class="col-centered"><font size="5" font="Helvetica"
                                                         color="white"></font></p>
         <div class="progress">
-          <div id="bar" class="progress-bar" style="width:76%">76%</div>
+          <div id="bar" class="progress-bar" [ngStyle]="{'width': data.pop[0] + '%'}">{{ data.pop[0]
+            }}%
+          </div>
         </div>
       </div>
 
@@ -99,7 +109,9 @@
         <p class="bar-descr" class="col-centered"><font size="5" font="Helvetica"
                                                         color="white"></font></p>
         <div class="progress">
-          <div id="bar" class="progress-bar" style="width:76%">76%</div>
+          <div id="bar" class="progress-bar" [ngStyle]="{'width': data.pop[1] + '%'}">{{ data.pop[1]
+            }}%
+          </div>
         </div>
       </div>
     </div>
@@ -109,7 +121,9 @@
         <p class="bar-descr" class="col-centered"><font size="5" font="Helvetica"
                                                         color="white"></font></p>
         <div class="progress">
-          <div id="bar" class="progress-bar" style="width:76%">76%</div>
+          <div id="bar" class="progress-bar" [ngStyle]="{'width': data.country[0] + '%'}">{{
+            data.country[0] }}%
+          </div>
         </div>
       </div>
 
@@ -123,7 +137,9 @@
         <p class="bar-descr" class="col-centered"><font size="5" font="Helvetica"
                                                         color="white"></font></p>
         <div class="progress">
-          <div id="bar" class="progress-bar" style="width:76%">76%</div>
+          <div id="bar" class="progress-bar" [ngStyle]="{'width': data.country[1] + '%'}">{{
+            data.country[1] }}%
+          </div>
         </div>
       </div>
     </div>
@@ -133,7 +149,9 @@
         <p class="bar-descr" class="col-centered"><font size="5" font="Helvetica"
                                                         color="white"></font></p>
         <div class="progress">
-          <div id="bar" class="progress-bar" style="width:76%">76%</div>
+          <div id="bar" class="progress-bar" [ngStyle]="{'width': data.edm[0] + '%'}">{{ data.edm[0]
+            }}%
+          </div>
         </div>
       </div>
 
@@ -147,7 +165,9 @@
         <p class="bar-descr" class="col-centered"><font size="5" font="Helvetica"
                                                         color="white"></font></p>
         <div class="progress">
-          <div id="bar" class="progress-bar" style="width:76%">76%</div>
+          <div id="bar" class="progress-bar" [ngStyle]="{'width': data.edm[1] + '%'}">{{ data.edm[1]
+            }}%
+          </div>
         </div>
       </div>
     </div>
@@ -157,7 +177,9 @@
         <p class="bar-descr" class="col-centered"><font size="5" font="Helvetica"
                                                         color="white"></font></p>
         <div class="progress">
-          <div id="bar" class="progress-bar" style="width:76%">76%</div>
+          <div id="bar" class="progress-bar" [ngStyle]="{'width': data.rock[0] + '%'}">{{
+            data.rock[0] }}%
+          </div>
         </div>
       </div>
 
@@ -171,7 +193,9 @@
         <p class="bar-descr" class="col-centered"><font size="5" font="Helvetica"
                                                         color="white"></font></p>
         <div class="progress">
-          <div id="bar" class="progress-bar" style="width:76%">76%</div>
+          <div id="bar" class="progress-bar" [ngStyle]="{'width': data.rock[1] + '%'}">{{
+            data.rock[1] }}%
+          </div>
         </div>
       </div>
     </div>
@@ -181,7 +205,9 @@
         <p class="bar-descr" class="col-centered"><font size="5" font="Helvetica"
                                                         color="white"></font></p>
         <div class="progress">
-          <div id="bar" class="progress-bar" style="width:76%">76%</div>
+          <div id="bar" class="progress-bar" [ngStyle]="{'width': data.indie[0] + '%'}">{{
+            data.indie[0] }}%
+          </div>
         </div>
       </div>
 
@@ -195,7 +221,9 @@
         <p class="bar-descr" class="col-centered"><font size="5" font="Helvetica"
                                                         color="white"></font></p>
         <div class="progress">
-          <div id="bar" class="progress-bar" style="width:76%">76%</div>
+          <div id="bar" class="progress-bar" [ngStyle]="{'width': data.indie[1] + '%'}">{{
+            data.indie[1] }}%
+          </div>
         </div>
       </div>
     </div>
@@ -205,7 +233,9 @@
         <p class="bar-descr" class="col-centered"><font size="5" font="Helvetica"
                                                         color="white"></font></p>
         <div class="progress">
-          <div id="bar" class="progress-bar" style="width:76%">76%</div>
+          <div id="bar" class="progress-bar" [ngStyle]="{'width': data.bluesjazz[0] + '%'}">{{
+            data.bluesjazz[0] }}%
+          </div>
         </div>
       </div>
 
@@ -219,7 +249,9 @@
         <p class="bar-descr" class="col-centered"><font size="5" font="Helvetica"
                                                         color="white"></font></p>
         <div class="progress">
-          <div id="bar" class="progress-bar" style="width:76%">76%</div>
+          <div id="bar" class="progress-bar" [ngStyle]="{'width': data.bluesjazz[1] + '%'}">{{
+            data.bluesjazz[1] }}%
+          </div>
         </div>
       </div>
     </div>
@@ -241,7 +273,9 @@
         <p class="bar-descr" class="col-centered"><font size="5" font="Helvetica"
                                                         color="white"></font></p>
         <div class="progress">
-          <div id="bar" class="progress-bar" style="width:76%">76%</div>
+          <div id="bar" class="progress-bar" [ngStyle]="{'width': data.musicpopularity[0] + '%'}">{{
+            data.musicpopularity[0] }}%
+          </div>
         </div>
       </div>
 
@@ -255,7 +289,9 @@
         <p class="bar-descr" class="col-centered"><font size="5" font="Helvetica"
                                                         color="white"></font></p>
         <div class="progress">
-          <div id="bar" class="progress-bar" style="width:76%">76%</div>
+          <div id="bar" class="progress-bar" [ngStyle]="{'width': data.musicpopularity[1] + '%'}">{{
+            data.musicpopularity[1] }}%
+          </div>
         </div>
       </div>
     </div>
@@ -277,7 +313,9 @@
         <p class="bar-descr" class="col-centered"><font size="5" font="Helvetica"
                                                         color="white"></font></p>
         <div class="progress">
-          <div id="bar" class="progress-bar" style="width:76%">76%</div>
+          <div id="bar" class="progress-bar" [ngStyle]="{'width': data.danciness[0] + '%'}">{{
+            data.danciness[0] }}%
+          </div>
         </div>
       </div>
 
@@ -291,7 +329,9 @@
         <p class="bar-descr" class="col-centered"><font size="5" font="Helvetica"
                                                         color="white"></font></p>
         <div class="progress">
-          <div id="bar" class="progress-bar" style="width:76%">76%</div>
+          <div id="bar" class="progress-bar" [ngStyle]="{'width': data.danciness[1] + '%'}">{{
+            data.danciness[1] }}%
+          </div>
         </div>
       </div>
     </div>
@@ -301,7 +341,9 @@
         <p class="bar-descr" class="col-centered"><font size="5" font="Helvetica"
                                                         color="white"></font></p>
         <div class="progress">
-          <div id="bar" class="progress-bar" style="width:76%">76%</div>
+          <div id="bar" class="progress-bar" [ngStyle]="{'width': data.instrumentalness[0] + '%'}">
+            {{ data.instrumentalness[0] }}%
+          </div>
         </div>
       </div>
 
@@ -315,7 +357,9 @@
         <p class="bar-descr" class="col-centered"><font size="5" font="Helvetica"
                                                         color="white"></font></p>
         <div class="progress">
-          <div id="bar" class="progress-bar" style="width:76%">76%</div>
+          <div id="bar" class="progress-bar" [ngStyle]="{'width': data.instrumentalness[1] + '%'}">
+            {{ data.instrumentalness[1] }}%
+          </div>
         </div>
       </div>
     </div>
@@ -325,7 +369,9 @@
         <p class="bar-descr" class="col-centered"><font size="5" font="Helvetica"
                                                         color="white"></font></p>
         <div class="progress">
-          <div id="bar" class="progress-bar" style="width:76%">76%</div>
+          <div id="bar" class="progress-bar" [ngStyle]="{'width': data.highenergy[0] + '%'}">{{
+            data.highenergy[0] }}%
+          </div>
         </div>
       </div>
 
@@ -339,7 +385,9 @@
         <p class="bar-descr" class="col-centered"><font size="5" font="Helvetica"
                                                         color="white"></font></p>
         <div class="progress">
-          <div id="bar" class="progress-bar" style="width:76%">76%</div>
+          <div id="bar" class="progress-bar" [ngStyle]="{'width': data.highenergy[1] + '%'}">{{
+            data.highenergy[1] }}%
+          </div>
         </div>
       </div>
     </div>
@@ -349,13 +397,15 @@
         <p class="bar-descr" class="col-centered"><font size="5" font="Helvetica"
                                                         color="white"></font></p>
         <div class="progress">
-          <div id="bar" class="progress-bar" style="width:76%">76%</div>
+          <div id="bar" class="progress-bar" [ngStyle]="{'width': data.happiness[0] + '%'}">{{
+            data.happiness[0] }}%
+          </div>
         </div>
       </div>
 
       <div class="col-md-4">
         <div class="text-center">
-          <p><font size="5" font="Helvetica" color="white">Happy</font></p>
+          <p><font size="5" font="Helvetica" color="white">Happiness</font></p>
         </div>
       </div>
 
@@ -363,7 +413,9 @@
         <p class="bar-descr" class="col-centered"><font size="5" font="Helvetica"
                                                         color="white"></font></p>
         <div class="progress">
-          <div id="bar" class="progress-bar" style="width:76%">76%</div>
+          <div id="bar" class="progress-bar" [ngStyle]="{'width': data.happiness[1] + '%'}">{{
+            data.happiness[1] }}%
+          </div>
         </div>
       </div>
     </div>
@@ -373,7 +425,9 @@
         <p class="bar-descr" class="col-centered"><font size="5" font="Helvetica"
                                                         color="white"></font></p>
         <div class="progress">
-          <div id="bar" class="progress-bar" style="width:76%">76%</div>
+          <div id="bar" class="progress-bar" [ngStyle]="{'width': data.fast[0] + '%'}">{{
+            data.fast[0] }}%
+          </div>
         </div>
       </div>
 
@@ -387,7 +441,9 @@
         <p class="bar-descr" class="col-centered"><font size="5" font="Helvetica"
                                                         color="white"></font></p>
         <div class="progress">
-          <div id="bar" class="progress-bar" style="width:76%">76%</div>
+          <div id="bar" class="progress-bar" [ngStyle]="{'width': data.fast[1] + '%'}">{{
+            data.fast[1] }}%
+          </div>
         </div>
       </div>
     </div>
@@ -475,8 +531,10 @@
 </div>
 
 <div class="image">
-  <img src="https://78.media.tumblr.com/6c11feeb853a6d0678798aac96129a00/tumblr_o6gj8lHlr01vn2zj8o1_500.png" alt="" style="width:100%;"/>
-  <h2><font size="7" font="Helvetica" color="white"><b>COMPATIBILITY SCORE</b></font><br />
-    <font size="7" font="Helvetica" color="white"><b>99%</b></font></h2>
+  <img
+    src="https://78.media.tumblr.com/6c11feeb853a6d0678798aac96129a00/tumblr_o6gj8lHlr01vn2zj8o1_500.png"
+    alt="" style="width:100%;"/>
+  <h2><font size="7" font="Helvetica" color="white"><b>COMPATIBILITY SCORE</b></font><br/>
+    <font size="7" font="Helvetica" color="white"><b>{{  compatibility  }}</b></font></h2>
 </div>
 
