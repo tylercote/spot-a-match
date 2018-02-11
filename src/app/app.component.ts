@@ -56,7 +56,7 @@ export class AppComponent implements OnInit {
       const u1len = user1['tracks'].length;
 
       const u2 = u2g[field];
-      const u2len = user1['tracks'].length;
+      const u2len = user2['tracks'].length;
       return [
         Math.round(u1 / u1len * 100),
         Math.round(u2 / u2len * 100),
@@ -65,6 +65,9 @@ export class AppComponent implements OnInit {
     }
 
     return {
+      'name': [user1['name'], user2['name'], 0],
+      'followers': [user1['followers'], user2['followers'], 0],
+      'imageurl': [user1['imageurl'], user2['imageurl'], 0],
       'classical': valuesFor('classical'),
       'hiphop': valuesFor('hip hop'),
       'bluesjazz': valuesFor('jazz blues'),
@@ -88,7 +91,15 @@ export class AppComponent implements OnInit {
 
   async buildUser(userId) {
 
-    // await s.getUser(userId).then(user => user.)
+    let display_name;
+    let followers_count;
+    let image_url;
+
+    await s.getUser(userId).then(user => {
+      display_name = user.display_name;
+      followers_count = user.followers.total;
+      image_url = user.images[0].url;
+    });
 
     const response = await this.getUserTracks(userId);
     const tracks = response['tracks'];
@@ -101,13 +112,38 @@ export class AppComponent implements OnInit {
     const genres = await this.getUserGenres(artists);
     await this.sleep(2000);
     console.log(genres);
+    // let danceiness = 0;
+    // let instrumentalness = 0;
+    // let highenergy = 0;
+    // let happiness = 0;
+    // let fast = 0;
+    // const audioFeatures = await s.getAudioFeaturesForTracks(tracks.slice(0, 50)).then(features => {
+    //     features.audio_features.forEach(feature => {
+    //       console.log('Enter for each');
+    //       danceiness += feature.danceability;
+    //       instrumentalness += feature.instrumentalness;
+    //       highenergy += feature.energy;
+    //       happiness += feature.valence;
+    //       fast += feature.tempo;
+    //     })
+    //   }
+    // );
+    // console.log('DANCEABILITY: ' + audioFeatures.audio_features[0].danceability);
 
     const user = {
       'id': userId,
+      'name': display_name,
+      'imageurl': image_url,
+      'followers': followers_count,
       'tracks': tracks,
       'artists': artists,
       'genres': genres,
       'popularity': Math.round(popularity[0] / tracks.length),
+      // 'danceiness': Math.round((danceiness / 50) * 100),
+      // 'instrumentalness': Math.round((instrumentalness / 50) * 100),
+      // 'highenergy': Math.round((highenergy / 50) * 100),
+      // 'happiness': Math.round((happiness / 50) * 100),
+      // 'fast': Math.round((fast / 50) * 100)
     };
     console.log(user);
     return user;
